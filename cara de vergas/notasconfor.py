@@ -6,3 +6,7 @@ for i in range(cant):
     suma=suma+notas
 prom=suma/cant
 print("SU PROMEDIO ES ",prom)
+if prom<=4:
+    print("reprobaste")
+else:
+    print("aprobaste")

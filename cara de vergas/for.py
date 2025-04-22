@@ -1,5 +1,5 @@
-#como ocupar el for
+#como ocupar el for para calculos matematicos
 num=int(input("que numero desea saber "))
-canper=int(input("hasta que tabla desea saber"))
-for i in range(canper):
-    print(i ,"*",canper, canper*i )
+tab=int(input("hasta que tabla desea saber"))
+for i in range(tab):
+    print(num ,"*",i+1, num*i+num )
