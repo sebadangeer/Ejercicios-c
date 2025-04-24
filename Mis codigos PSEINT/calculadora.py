@@ -1,4 +1,5 @@
 print("bienvenido a la calculadora de sebita")
+
 n1=float(input("ingrese un numero:"))
 n2=float(input("ingrese un numero:"))
 n3=float(input("ingrese un numero:"))
