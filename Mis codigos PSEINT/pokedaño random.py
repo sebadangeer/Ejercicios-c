@@ -1,8 +1,8 @@
 import random
+import time
 turno=0
 v1=50
 v2=50
-ataque=random.randint(7,10)
 while v2>0 and v1>0:
     if turno % 2==0:
             print("turno de pikachu")

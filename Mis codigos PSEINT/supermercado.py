@@ -56,7 +56,3 @@ while producto!="nada mas":
     if producto=="exit":
         break
 print("su total es de",total)
-
-    
-
-
