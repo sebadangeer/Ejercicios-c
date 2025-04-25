@@ -10,3 +10,4 @@ if prom<=4:
     print("reprobaste")
 else:
     print("aprobaste")
+    

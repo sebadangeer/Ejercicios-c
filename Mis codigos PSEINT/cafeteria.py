@@ -6,3 +6,4 @@ if dinero<cafe:
     print("no tenemos fondos")
 else:
     print("aqui tiene su cafe que tenga buen dia")
+    

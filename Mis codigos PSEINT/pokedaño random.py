@@ -33,4 +33,3 @@ if v1<=0:
       print("ha ganado pikachu")
 else:
       print("ha ganado vergamo")
-                    
