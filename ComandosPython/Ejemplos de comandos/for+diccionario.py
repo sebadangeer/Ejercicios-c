@@ -11,13 +11,13 @@ for x in letra:
     else:
         total+=1
     totall+=1
-que=int(input("""que desea saber del texto
-1.-vocales
-2.-consonantes
-3.-letras tiene"""))
-diccionario={
-    1:totalv,
-2:total,
-3:totall
-}
-print(diccionario[que])
+    quedeseasaber=input("""que desea saber del texto
+    1.-vocales
+    2.-consonantes
+    3.-letras tiene""")
+    diccionario={
+        1:totalv,
+    2:total,
+    3:totall
+    }
+    print(diccionario[quedeseasaber])
