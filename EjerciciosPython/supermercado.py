@@ -1,58 +1,44 @@
 print("Usted a ingresado a autoservice SEVIN")
-producto=0
+def totalfinal(preciototal,cantidad,precio,productollevado):
+    codigosdeproductos={1:"papasfritas",2:"vinagre",3:"fosforos",4:"salsa de tomate",
+                 5:"tallarines",6:"toalla nova",7:"cargador"}
+    print("Usted lleva",codigosdeproductos[productollevado])
+    return preciototal+cantidad*precio
 total=0
-pf=1000
-vn=1500
-fosf=300
-tmt=800
-tal=1000
-tno=700
-carg=10000
-while producto!="nada mas":
-    print("")
-    print("su total actual es de:",total)
-    print("")
-    print("/que desea llevar/")
-    print("")
-    print("papas fritas")
-    print("vinagre")
-    print("fosforos")
-    print("salsa de tomate")
-    print("Tallarines")
-    print("toalla nova")
-    print("cargador de celular")
-    print("")
-    print("para salir escriba exit en la terminal")
-    print("")
-    producto=(input("ingrese nombre de producto:"))
-    if producto=="papas fritas":
-        print("usted lleva papas fritas")
-        cantp=int(input("ingrese cantidad de producto: "))
-        total=total+pf*cantp
-    if producto=="vinagre":
-        print("usted lleva vinagre")
-        cantp=int(input("ingrese cantidad de producto: "))
-        total=total+vn*cantp
-    if producto=="fosforos":
-        print("usted lleva fosforos")
-        cantp=int(input("ingrese cantidad de producto: "))
-        total=total+fosf*cantp
-    if producto=="salsa de tomate":
-        print("usted lleva salsa de tomate")
-        cantp=int(input("ingrese cantidad de producto: "))
-        total=total+tmt*cantp
-    if producto=="tallarines":
-        print("usted lleva tallarines")
-        cantp=int(input("ingrese cantidad de producto: "))
-        total=total+tal*cantp
-    if producto=="toalla nova":
-        print("usted lleva toalla nova")
-        cantp=int(input("ingrese cantidad de producto: "))
-        total=total+tno*cantp
-    if producto=="cargador de celular":
-        print("usted lleva un cargador de celular")
-        cantp=int(input("ingrese cantidad de producto: "))
-        total=total+carg*cantp
-    if producto=="exit":
+producto=0
+while producto!=10:
+    print(f"""
+su total actual es de:{total}
+
+/que desea llevar/
+
+1.-Papas fritas
+2.-Vinagre
+3.-Fosforos
+4.-Salsa de tomate
+5.-Tallarines
+6.-Toalla nova
+7.-cargador de celular
+
+para salir escriba 10 en la terminal
+""")
+    producto=int(input("ingrese numero de producto:"))
+    if producto==10:
         break
+    cantp=int(input("ingrese cantidad de producto: "))
+    match (producto):
+        case 1 :
+            total=totalfinal(total,cantp,1000,producto)
+        case 2 :
+            total=totalfinal(total,cantp,1300,producto)
+        case 3 :
+            total=totalfinal(total,cantp,300,producto)
+        case 4 :
+            total=totalfinal(total,cantp,800,producto)
+        case 5 :
+            total=totalfinal(total,cantp,1100,producto)
+        case 6 :
+            total=totalfinal(total,cantp,1600,producto)
+        case 7 :
+            total=totalfinal(total,cantp,12000,producto)
 print("su total es de",total)
