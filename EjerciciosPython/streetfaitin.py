@@ -8,7 +8,7 @@ time.sleep(1)
 jugador2=str(input("ingrese nombre de jugador 2 : "))
 while vida_de_jugador1>=0 and vida_de_jugador2>=0:
     if turno%2==0:
-        print(jugador1,"/"*vida_de_jugador1,vida_de_jugador1,"50","                    ",jugador2,"/"*vida_de_jugador2,vida_de_jugador2,"50")
+        print(jugador1,"▄"*vida_de_jugador1,vida_de_jugador1,"50","                    ",jugador2,"▄"*vida_de_jugador2,vida_de_jugador2,"50")
         print("Turno de ",jugador1)
         time.sleep(1)
         ataque=randint(3,15)
