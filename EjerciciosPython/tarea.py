@@ -10,7 +10,7 @@ while True:
     listadealumnosreprobados=[]
     listadealumnosaprobados=[]
     notasdealumnos=[]
-    try:*
+    try:
         cantalumnos=int(input("Ingrese la cantidad de  alumnos del 003D : "))
         tiempo()
         for i in range(cantalumnos):
