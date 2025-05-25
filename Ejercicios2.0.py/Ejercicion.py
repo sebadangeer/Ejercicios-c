@@ -20,7 +20,6 @@ carrito=[]
 precio=[]
 totalcondescuento=0
 while True:
-
     print("Bienvenido a Sushitumare")
     Opc=int(input("""Que desea realizar:
 1.-Comprar
