@@ -73,54 +73,72 @@ Ingrese el monto que desea pagar $ """))
     debes-=monto_a_pagar
     cupo+=monto_a_pagar
     return debes,cupo
-while True:    
-    opcion=int(input("""Bienvenido al menú ONLINE de su tarjta de crédito " 
-        
-        Que desea realizar
+while True:
+    try:
+        opcion=int(input("""Bienvenido al menú ONLINE de su tarjta de crédito " 
             
-            1.-Acerca de mi tarjeta
+            Que desea realizar
+                
+                1.-Acerca de mi tarjeta
+                
+                2.-Compras
+                
+                3.-Pago de mi deuda
             
-            2.-Compras
-            
-            3.-Pago de mi deuda
-Ingrese una opc : """))
-    match opcion:
-        case 1:
-            acercade=int(input("""
-                1.-Consulta de deuda
-                2.-Saldo                      
-                Que desea saber : """))
-            consulta(deuda,saldo,acercade)
-        case 2:
-            monto_credito=0
-            cantp=int(input("Ingrese la cantidad de productos que llevara: "))
-            for i in range(cantp):
-                prod=int(input("""Ingrese numero de producto:
+                4.-Salir
+    Ingrese una opc : """))
+        match opcion:
+            case 1:
+                acercade=int(input("""
+                    1.-Consulta de deuda
+                    2.-Saldo                      
+                    Que desea saber : """))
+                consulta(deuda,saldo,acercade)
+            case 2:
+                monto_credito=0
+                cantp=int(input("Ingrese la cantidad de productos que llevara: "))
+                for i in range(cantp):
+                    prod=int(input("""Ingrese numero de producto:
 
-            1.-Poleras $33.000
-            2.-Jeans $40.000
-            3.-Gorro $25.000
-            4.-Volver al menú"""))
-                match prod:
-                    case 1:
-                        pago=total_a_pagar(precios,producto,prod,saldo,carrito)
-                        monto_credito+=pago
-                    case 2:
-                        pago=total_a_pagar(precios,producto,prod,saldo,carrito)
-                        monto_credito+=pago
-                    case 3:
-                        pago=total_a_pagar(precios,producto,prod,saldo,carrito)
-                        monto_credito+=pago
-                    case 4:
+                1.-Poleras $33.000
+                2.-Jeans $40.000
+                3.-Gorro $25.000
+                4.-Volver al menú"""))
+                    match prod:
+                        case 1:
+                            pago=total_a_pagar(precios,producto,prod,saldo,carrito)
+                            monto_credito+=pago
+                        case 2:
+                            pago=total_a_pagar(precios,producto,prod,saldo,carrito)
+                            monto_credito+=pago
+                        case 3:
+                            pago=total_a_pagar(precios,producto,prod,saldo,carrito)
+                            monto_credito+=pago
+                        case 4:
+                            break
+                print("Su total a pagar es de $ ",monto_credito)
+                
+                tarjeta=int(input("Ingrese la clave de su tarjeta de credito : "))
+                clavereal=1234
+                while clavereal!=tarjeta:
+                    print("Clave invalida")
+                    tarjeta=str(input("""Presione "0" para volver al menú
+                                    Ingrese la clave de su tarjeta de credito : """))
+                    if tarjeta=="0":
                         break
-            print("Su total a pagar es de $ ",monto_credito)
-            if monto_credito<=saldo:
-                print("Compra realizada con exito")
-                saldo-=monto_credito
-            else:
-                print("Su saldo no es suficiente para realizar esta compra")
+                if monto_credito<=saldo and tarjeta==clavereal:
+                    print("Compra realizada con exito")
+                    saldo-=monto_credito
+                    deuda+=monto_credito
+                else:
+                    print("Su saldo no es suficiente para realizar esta compra")
 
-        case 3:
-            deuda,saldo=pago_de_deuda(deuda,saldo)
-            print(f"""Su deuda actual es de : $ {deuda}
-                  El cupo actual de su tarjeta es de : $ {saldo}""")
+            case 3:
+                deuda,saldo=pago_de_deuda(deuda,saldo)
+                print(f"""Su deuda actual es de : $ {deuda}
+                    El cupo actual de su tarjeta es de : $ {saldo}""")
+            case 4:
+                print("Saliendo...")
+                break
+    except Exception:
+        print("Ingrese los valores de forma correcta")

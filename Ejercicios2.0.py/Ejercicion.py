@@ -118,7 +118,14 @@ TOTAL PRODUCTOS:{productos}
         1.-Si
         2.-No
         Ingrese una opc : """))
+            while salida!=1 and salida!=0:
+                print("Opcion Invalida")
+                salida=int(input("""Desea realizar otra compra
+        1.-Si
+        2.-No
+        Ingrese una opc : """))  
             if salida==1:
                 print("")
+                total=0
             else:
                 break
