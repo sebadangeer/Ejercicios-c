@@ -42,16 +42,31 @@ while True:
         match opc:
             case 1:
                 print("Usted tiene una deuda de $ ",deuda)
-                op2=int(input("""Desea pagar o volver al menu
+                while True:
+                    try:
+                        op2=int(input("""Desea pagar o volver al menu
                               1.- Pagar
                               2.- Volver al menu
                               """))
+                        break
+                    except Exception:
+                        print("Ingrese valores numericos")
                 if op2==1:
-                    pago_credito=int(input("Ingrese el monto que va a pagar : "))
+                    while True:
+                        try:
+                            pago_credito=int(input("Ingrese el monto que va a pagar : "))
+                            break
+                        except Exception:
+                            print("Ingrese un valor valido")
                     while pago_credito<0 and pago_credito<=deuda:
-                        print("Ingrese un monto valido")
-                        pago_credito=int(input("""Ingrese 1 para salir
-                        Ingrese el monto que va a pagar : """))
+                        while True:
+                            try:
+                                print("Ingrese un monto valido")
+                                pago_credito=int(input("""Ingrese 1 para salir
+                                Ingrese el monto que va a pagar : """))
+                                break
+                            except Exception:
+                                print("Ingrese un monto valido")
                         if pago_credito==1:
                             print("No quiere pagar nada")
                             break    
@@ -62,7 +77,12 @@ while True:
                 if op2==2:
                     print("")
             case 2:
-                compra=int(input("Ingrese el monto a pagar"))
+                while True:
+                    try:
+                        compra=int(input("Ingrese el monto a pagar"))
+                        break
+                    except Exception:
+                        print("Ingrese un monto valido")
                 if compra<=saldo:
                     print("Pago realizado con exito")
                     saldo=saldo-compra

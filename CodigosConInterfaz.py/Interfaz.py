@@ -1,7 +1,8 @@
 from tkinter import *
 ventana=Tk()
+car=5
 #Nombre del archivo
-ventana.title("Esto es para crear nombre de mi titulo")
+ventana.title(f"Esto es para crear nombre de mi titulo")
 #Icono del programa
 ventana.iconbitmap("Imagenpy.ico")
 #Medidas de la ventana primero ancho luego alto
