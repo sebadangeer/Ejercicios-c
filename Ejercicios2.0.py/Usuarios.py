@@ -6,6 +6,7 @@ contraseña2=None
 contraseña3=None
 usuarioscreados=0
 clave_de_acceso=2345
+usuarioingres=""
 def crear_usuarios(usuario,contraseña):
     global usuarioscreados
     while True:
@@ -50,8 +51,6 @@ while True:
             case 1:
                 if usuarioscreados==0:
                     print("No hay usuarios creado...Volviendo al menú")
-                else:
-                    print("")
             case 2:
                 if usuarioscreados<=3:
                     while True:

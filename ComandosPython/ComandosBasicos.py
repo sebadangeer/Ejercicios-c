@@ -34,7 +34,9 @@ if Comando==2:
 if Comando==3:
     print("""#1. variable=max(X,Y,Z) : Se queda solo con el numero mayor
 #2. variable=min(X,Y,Z) : Se queda solo con el numero menor
-#3. round(variable) : Se redondea los valores float""")
+#3. round(variable) : Se redondea los valores float
+#4. variable = abs(-5)
+#5. variable = 5 :   abs sirve para volver numros negativos a enteros """)
 
 if Comando==4:
     print("""#1. if variable > 5: : Condicional if
