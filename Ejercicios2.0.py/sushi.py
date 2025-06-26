@@ -31,7 +31,7 @@ def compra():
  2. Otaku Roll $5000
  3. Pulpo Venenoso Roll $5200
  4. Anguila Eléctrica Roll $4800 
- 5.Dejar de comprar   
+ 5. Dejar de comprar   
 ingrese una opc :             """))
             match opc:
                 case 1:

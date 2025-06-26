@@ -19,3 +19,5 @@ while True:
                 print("Opcion invalida")
     except Exception: 
         print("Si pides enteros y escribes numeros ...")
+        diccionario={1:[]}
+        diccionario[1].append("hola")

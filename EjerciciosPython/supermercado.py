@@ -52,6 +52,8 @@ while producto!=10:
             case 7 :
                 total=totalfinal(total,cantp,12000,producto)
                 totaldeproductos+=cantp
+            case _ : 
+                print("Ingrese una opcion valida")
     except Exception:
         print("ERROR : HAS INGRESADO TEXTO")
 print(f"""El usuario: {nombre}
